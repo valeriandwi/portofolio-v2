@@ -56,7 +56,7 @@ const ListProject: React.FC<IListProjectProps> = ({
             </div>
             {href && (
               <p className="font-semibold text-neutral-600 text-sm mt-2 dark:text-neutral-400">
-                Check Live Site 🫵
+                Project Info 🫵
               </p>
             )}
           </div>

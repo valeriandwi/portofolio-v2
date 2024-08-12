@@ -2,6 +2,7 @@ import { FlipWords } from "@/components/ui/flip-words";
 import { Button } from "@/components/ui/moving-border";
 import { IconViewfinder } from "@tabler/icons-react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Introduction = () => {
@@ -33,45 +34,52 @@ const Introduction = () => {
               />
             </div>
             <div className="flex flex-row space-x-3 justify-center w-full lg:justify-start">
-              <Button
-                containerClassName="rounded-xl w-[40px] h-[40px] bg-teal-800 hover:bg-teal-900"
-                borderRadius="50%"
-                className="font-semibold"
-                borderClassName="rounded-full w-[40px] h-[40px]"
-              >
-                <Image
-                  src="./github.svg"
-                  height={"48"}
-                  width={"48"}
-                  alt="Github Icon"
-                />
-              </Button>
-              <Button
-                containerClassName="rounded-full w-[40px] h-[40px] bg-teal-800 hover:bg-teal-900"
-                borderRadius="50%"
-                className="font-semibold"
-                borderClassName="rounded-full w-[40px] h-[40px]"
-              >
-                <Image
-                  src="./linkedin.svg"
-                  height={"48"}
-                  width={"48"}
-                  alt="Github Icon"
-                />
-              </Button>
-              <Button
-                containerClassName="rounded-full w-[40px] h-[40px] bg-teal-800 hover:bg-teal-900"
-                borderRadius="50%"
-                className="font-semibold"
-                borderClassName="rounded-full w-[40px] h-[40px]"
-              >
-                <Image
-                  src="./instagram.svg"
-                  height={"48"}
-                  width={"48"}
-                  alt="Github Icon"
-                />
-              </Button>
+              <Link href="https://github.com/valeriandwi">
+                <Button
+                  containerClassName="rounded-xl w-[40px] h-[40px] bg-teal-800 hover:bg-teal-900"
+                  borderRadius="50%"
+                  className="font-semibold"
+                  borderClassName="rounded-full w-[40px] h-[40px]"
+                >
+                  <Image
+                    src="./github.svg"
+                    height={"48"}
+                    width={"48"}
+                    alt="Github Icon"
+                  />
+                </Button>
+              </Link>
+              <Link href="https://www.linkedin.com/in/valeriandwi/">
+                <Button
+                  containerClassName="rounded-full w-[40px] h-[40px] bg-teal-800 hover:bg-teal-900"
+                  borderRadius="50%"
+                  className="font-semibold"
+                  borderClassName="rounded-full w-[40px] h-[40px]"
+                >
+                  <Image
+                    src="./linkedin.svg"
+                    height={"48"}
+                    width={"48"}
+                    alt="Github Icon"
+                  />
+                </Button>
+              </Link>
+              <Link href="https://www.instagram.com/valerian_dwi/">
+                <Button
+                  containerClassName="rounded-full w-[40px] h-[40px] bg-teal-800 hover:bg-teal-900"
+                  borderRadius="50%"
+                  className="font-semibold"
+                  borderClassName="rounded-full w-[40px] h-[40px]"
+                >
+                  <Image
+                    src="./instagram.svg"
+                    height={"48"}
+                    width={"48"}
+                    alt="Github Icon"
+                  />
+                </Button>
+              </Link>
+
               <Button
                 containerClassName="!bg-teal-800 hover:!bg-teal-900"
                 className="font-semibold bg-black hover:bg-gray-900"
@@ -84,8 +92,8 @@ const Introduction = () => {
           <div className="w-36 h-36 lg:w-72 lg:h-72 relative">
             <div className="glow absolute top-[40%] right-1/2" />
             <div
-              className="absolute w-full h-full rounded-full bg-white z-[999]"
-              style={{ backgroundImage: "url('./next.svg')" }}
+              className="absolute w-full h-full rounded-full bg-white z-[999] bg-cover"
+              style={{ backgroundImage: "url('./profile-picture.jpeg')" }}
             />
           </div>
         </div>

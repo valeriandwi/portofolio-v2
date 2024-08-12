@@ -78,7 +78,7 @@ const Projects = () => {
       description:
         "Developed using ReactJS and Tailwind, replicating the design to provide a seamless user experience.",
       stacks: ["react", "tailwind"],
-      thumbnail: "/institution.png",
+      thumbnail: "/kintan.png",
     },
     {
       title: "Emotion Recognition",
@@ -86,7 +86,8 @@ const Projects = () => {
       description:
         "Developed Emotion Recognition using openCV with VGG19 CNN Model and built on the website",
       stacks: ["python", "javascript"],
-      thumbnail: "/institution.png",
+      thumbnail: "/emotion-recognition.png",
+      href: "https://github.com/valeriandwi/mood-based-music-recommendation",
     },
   ];
 
