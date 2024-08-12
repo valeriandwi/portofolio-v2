@@ -89,6 +89,7 @@ const config = {
   },
   plugins: [
     require("tailwindcss-animate"),
+    require("tailwind-scrollbar"),
     plugin(function ({ matchUtilities, theme }: any) {
       matchUtilities(
         {

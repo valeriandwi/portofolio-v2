@@ -35,11 +35,11 @@ const ListProject: React.FC<IListProjectProps> = ({
             alt="blog"
             className="w-full h-full mb-4"
           />
-          <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
+          <p className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
             {title}
-          </h3>
+          </p>
           <div className="text-base !m-0 !p-0 !mb-4 font-normal">
-            <span className="text-slate-500 ">{description}</span>
+            <span className="text-slate-400 ">{description}</span>
           </div>
           <div className="flex flex-row justify-between">
             <div className="flex flex-row space-x-2 items-center">

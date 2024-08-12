@@ -8,7 +8,7 @@ const TechnologyStacks = () => {
       <p className="text-4xl text-center mb-16 mt-8 font-bold text-shadow-sm lg:text-shadow-lg shadow-teal-500">
         My <span className="text-teal-500">Technology Stacks</span>
       </p>
-      <div className="flex flex-wrap justify-center gap-8 px-32">
+      <div className="flex flex-wrap justify-center lg:gap-8 gap-6 lg:px-32 px-8">
         {technologyStackList.map(({ name, label }) => (
           <div
             className="flex flex-row items-center space-x-3 font-bold"

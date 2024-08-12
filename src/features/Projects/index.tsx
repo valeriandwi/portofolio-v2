@@ -42,7 +42,7 @@ const Projects = () => {
       pinTitle: "NextJS Blog Starter",
       description:
         "A full-stack starter application built using Next.js, Prisma, NextAuth, and Vercel Postgres",
-      stacks: ["nextjs", "prisma", "tailwind", "vercel"],
+      stacks: ["nextjs", "prisma", "tailwind", "postgresql"],
       thumbnail: "/blog.png",
     },
     {
@@ -60,7 +60,7 @@ const Projects = () => {
       pinTitle: "HR Management System",
       description:
         "Designed to streamline and manage the recruitment and employee management processes within an organization",
-      stacks: ["nextjs", "prisma", "antd"],
+      stacks: ["nextjs", "prisma", "postgresql", "antd"],
       thumbnail: "/hrm.png",
     },
     {
@@ -81,11 +81,11 @@ const Projects = () => {
       thumbnail: "/institution.png",
     },
     {
-      title: "Kintan Website Cloned",
-      pinTitle: "Kintan Website Cloned",
+      title: "Emotion Recognition",
+      pinTitle: "Emotion Recognition",
       description:
-        "Developed using ReactJS and Tailwind, replicating the design to provide a seamless user experience.",
-      stacks: ["nextjs", "react-spring", "tailwind"],
+        "Developed Emotion Recognition using openCV with VGG19 CNN Model and built on the website",
+      stacks: ["python", "javascript"],
       thumbnail: "/institution.png",
     },
   ];
@@ -104,7 +104,7 @@ const Projects = () => {
         ))}
       </div>
       <div className="flex justify-center mt-8">
-        <Button>Show More</Button>
+        {/* <Button>Show More</Button> */}
       </div>
       <TechnologyStacks />
     </div>

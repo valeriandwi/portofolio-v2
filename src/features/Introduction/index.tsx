@@ -1,5 +1,6 @@
 import { FlipWords } from "@/components/ui/flip-words";
 import { Button } from "@/components/ui/moving-border";
+import { IconViewfinder } from "@tabler/icons-react";
 import Image from "next/image";
 import React from "react";
 
@@ -8,7 +9,7 @@ const Introduction = () => {
     <div className="min-h-screen dark:bg-black bg-white dark:bg-grid-white/[0.05] bg-grid-black/[0.05]">
       <div className="max-w-7xl mx-auto sm:p-5">
         <nav className="py-10">
-          <h1 className="animate-in text-xl lg:text-2xl font-bold underline underline-offset-8 decoration-teal-500 text-shadow-lg shadow-teal-500 -rotate-2">
+          <h1 className="animate-in lg:px-0 px-4 text-xl lg:text-2xl font-bold underline underline-offset-8 decoration-teal-500 text-shadow-lg shadow-teal-500 -rotate-2">
             Valerian Dwi Purnomo 🧑‍💻
           </h1>
         </nav>
@@ -70,6 +71,13 @@ const Introduction = () => {
                   width={"48"}
                   alt="Github Icon"
                 />
+              </Button>
+              <Button
+                containerClassName="!bg-teal-800 hover:!bg-teal-900"
+                className="font-semibold bg-black hover:bg-gray-900"
+                borderClassName="rounded-full"
+              >
+                View My CV
               </Button>
             </div>
           </div>

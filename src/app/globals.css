@@ -11,3 +11,10 @@
 
   box-shadow: 0 0 130px 130px #14b8a6;
 }
+
+@media (max-width: 1024px) {
+  /* Tailwind's default breakpoint for small screens (sm) */
+  .glow {
+    box-shadow: 0 0 64px 64px #14b8a6;
+  }
+}
