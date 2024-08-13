@@ -19,7 +19,7 @@ const Introduction = () => {
             </h1>
           </motion.div>
         </nav>
-        <div className="min-h-[60vh] flex flex-col gap-10 lg:gap-0 lg:flex-row items-center justify-between">
+        <div className="min-h-[60vh] px-8 lg:px-0 flex flex-col gap-10 lg:gap-0 lg:flex-row items-center justify-between">
           <div className="space-y-10 text-center lg:text-left">
             <motion.div
               initial={{ opacity: 0 }}
