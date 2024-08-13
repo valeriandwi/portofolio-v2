@@ -1,4 +1,3 @@
-import { FlipWords } from "@/components/ui/flip-words";
 import { Button } from "@/components/ui/moving-border";
 import { motion } from "framer-motion";
 import Image from "next/image";
