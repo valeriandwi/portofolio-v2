@@ -37,14 +37,16 @@ const Introduction = () => {
                   </span>
                 </span>
               </h1>
-              <div className="text-lg text-gray-300">
-                Based on Indonesia, I&apos;m Frontend Developer who passionate
-                about
-                <FlipWords
-                  className="!text-white text-shadow-lg shadow-teal-500 "
-                  words={["Web", "Data"]}
-                />
-              </div>
+              <div className="text-lg text-gray-300 leading-4">
+                <p>
+                  Based in Indonesia who specializing in creating responsive and
+                  user-friendly web applications.
+                </p>
+                <br />
+                <span className="text-shadow-lg shadow-teal-500">
+                  Let&apos;s work together to bring your ideas to life
+                </span>
+              </div>{" "}
             </motion.div>
             <motion.div
               initial={{ scaleY: 0 }}
@@ -97,14 +99,15 @@ const Introduction = () => {
                     />
                   </Button>
                 </Link>
-
-                <Button
-                  containerClassName="!bg-teal-800 hover:!bg-teal-900"
-                  className="font-semibold bg-black hover:bg-gray-900"
-                  borderClassName="rounded-full"
-                >
-                  View My CV
-                </Button>
+                <a href="./VALERIAN-DWI-PURNOMO-CV.pdf" download>
+                  <Button
+                    containerClassName="!bg-teal-800 hover:!bg-teal-900"
+                    className="font-semibold bg-black hover:bg-gray-900"
+                    borderClassName="rounded-full"
+                  >
+                    Download My CV
+                  </Button>
+                </a>
               </div>
             </motion.div>
           </div>
