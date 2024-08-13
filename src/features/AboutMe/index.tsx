@@ -1,5 +1,6 @@
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import React from "react";
+import { motion } from "framer-motion";
 
 const AboutMe = () => {
   const items = [
@@ -28,7 +29,13 @@ const AboutMe = () => {
   ];
 
   return (
-    <div className="bg-black lg:min-h-screen pb-5 lg:pb-20 px-14 lg:px-20 w-full">
+    <motion.div
+      initial={{ x: -100, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
+      className="bg-black lg:min-h-screen pb-5 lg:pb-20 px-14 lg:px-20 w-full"
+    >
       <BentoGrid className="max-w-4xl mx-auto lg:auto-rows-[20rem]">
         {items.map((item, i) => (
           <BentoGridItem
@@ -41,7 +48,7 @@ const AboutMe = () => {
           />
         ))}
       </BentoGrid>
-    </div>
+    </motion.div>
   );
 };
 
