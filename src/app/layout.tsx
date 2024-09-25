@@ -6,14 +6,26 @@ import { Analytics } from "@vercel/analytics/react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("http://localhost:3000"),
+  metadataBase: new URL(process.env.SITE_URL as string),
   authors: {
     name: "Valerian Dwi Purnomo",
   },
   title: "Valerian Dwi Purnomo",
   description:
     "I'm a Frontend Wizard 🚀. Constantly pushing the boundaries of what's possible, I love diving into the latest technologies like React ⚛️.",
-  keywords: ["daily web coding", "frontend dev"],
+  keywords: [
+    "frontend development",
+    "React developer",
+    "Next.js",
+    "web development tutorials",
+    "UI/UX design",
+    "JavaScript frameworks",
+    "Chakra UI",
+    "Zustand state management",
+    "web performance optimization",
+    "responsive design",
+    "JavaScript best practices",
+  ],
   verification: { google: process.env.VERIFICATION_CODE_GOOGLE_SEARCH },
 };
 
