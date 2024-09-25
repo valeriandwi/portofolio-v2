@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://valeriandwi.my.id/
+
+# Sitemaps
+Sitemap: https://valeriandwi.my.id/sitemap.xml
