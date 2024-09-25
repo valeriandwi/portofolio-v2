@@ -7,7 +7,7 @@ import TechnologyStacks from "./TechnologyStacks";
 
 const Projects = () => {
   const defaultWordClassname =
-    "text-shadow-sm lg:text-shadow-lg shadow-teal-500 text-2xl lg:text-4xl";
+    "text-shadow-sm lg:text-shadow-lg shadow-teal-500 text-lg lg:text-4xl";
   const words = [
     {
       text: "A",
@@ -93,7 +93,7 @@ const Projects = () => {
 
   return (
     <div>
-      <div className="px-8 w-full flex justify-center">
+      <div className="px-16 lg:px-8 w-full flex justify-center">
         <TypewriterEffectSmooth
           words={words}
           cursorClassName="bg-teal-500 h-full w-[2px]"

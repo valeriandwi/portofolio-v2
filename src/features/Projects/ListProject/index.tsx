@@ -21,7 +21,7 @@ const ListProject: React.FC<IListProjectProps> = ({
   thumbnail,
 }) => {
   return (
-    <div className="min-h-[24rem] lg:min-h-[28rem] w-full flex items-center justify-center ">
+    <div className="min-h-[24rem] lg:min-h-[28rem] w-full flex items-center justify-center">
       <PinContainer
         title={pinTitle}
         href={href || "#"}

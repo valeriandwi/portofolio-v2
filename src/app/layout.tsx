@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
   description:
     "I'm a Frontend Wizard 🚀. Constantly pushing the boundaries of what's possible, I love diving into the latest technologies like React ⚛️.",
   keywords: ["daily web coding", "frontend dev"],
+  verification: { google: process.env.VERIFICATION_CODE_GOOGLE_SEARCH },
 };
 
 export default function RootLayout({
@@ -25,7 +27,10 @@ export default function RootLayout({
       lang="en"
       className=" !scrollbar-track-black scrollbar-thin scrollbar-thumb-teal-500 scrollbar-corner-teal-500"
     >
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Analytics />
+        {children}
+      </body>
     </html>
   );
 }
