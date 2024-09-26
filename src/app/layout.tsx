@@ -25,8 +25,10 @@ export const metadata: Metadata = {
     "web performance optimization",
     "responsive design",
     "JavaScript best practices",
+    "Valerian Dwi Purnomo",
   ],
   verification: { google: process.env.VERIFICATION_CODE_GOOGLE_SEARCH },
+  icons: { icon: "favicon.ico" },
 };
 
 export default function RootLayout({
