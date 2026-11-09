@@ -1,25 +1,29 @@
-import { technologyStackList } from "@/constants/contents";
-import Image from "next/image";
-import React from "react";
+import { TechIcon } from "@/components/ui/icons";
+import Reveal from "@/components/ui/reveal";
+import { skillRows } from "@/constants/contents";
 
 const TechnologyStacks = () => {
   return (
-    <div className="px-16">
-      <p className="text-4xl text-center mb-16 mt-8 font-bold text-shadow-sm lg:text-shadow-lg shadow-teal-500">
-        My <span className="text-teal-500">Technology Stacks</span>
-      </p>
-      <div className="flex flex-wrap justify-center lg:gap-8 gap-6 lg:px-32 px-8">
-        {technologyStackList.map(({ name, label }) => (
-          <div
-            className="flex flex-row items-center space-x-3 font-bold"
-            key={name}
-          >
-            <Image src={`/${name}.svg`} height="48" width="48" alt={name} />
-            <p>{label}</p>
+    <section className="skills wrap" id="skills">
+      <Reveal>
+        <h2 className="h2">Skills</h2>
+      </Reveal>
+      <Reveal>
+        {skillRows.map(({ title, icons, summary }) => (
+          <div className="row" key={title}>
+            <strong>{title}</strong>
+            <span className="icons" aria-hidden="true">
+              {icons.map(({ label, icon, glyph, text }) => (
+                <span title={label} key={label}>
+                  {icon ? <TechIcon name={icon} /> : glyph ?? text}
+                </span>
+              ))}
+            </span>
+            <span>{summary}</span>
           </div>
         ))}
-      </div>
-    </div>
+      </Reveal>
+    </section>
   );
 };
 
