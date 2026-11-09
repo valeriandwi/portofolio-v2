@@ -1,54 +1,41 @@
-import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
-import React from "react";
-import { motion } from "framer-motion";
+import Image from "next/image";
+import Reveal from "@/components/ui/reveal";
+import { ownership } from "@/constants/contents";
 
 const AboutMe = () => {
-  const items = [
-    {
-      title: "Bringing Digital Visions to Life",
-      titleClassName: "!text-4xl",
-      description:
-        "With creativity and technical expertise, I craft dynamic user interfaces using React and Next.js.",
-      className: "row-span-1 col-span-3 lg:col-span-2 lg:row-span-2",
-      thumbnail: "./about-me-1.png",
-    },
-    {
-      title: "Innovative Web Development",
-      description:
-        "Passionate about building seamless and engaging user experiences with modern web technologies.",
-      className: "col-span-3 lg:col-span-1",
-      thumbnail: "./about-me-2.png",
-    },
-    {
-      title: "The Art of Design",
-      description:
-        "Discover the beauty of thoughtful and functional design in web development.",
-      className: "col-span-3 lg:col-span-1",
-      thumbnail: "./about-me-3.png",
-    },
-  ];
-
   return (
-    <motion.div
-      initial={{ x: -100, opacity: 0 }}
-      whileInView={{ x: 0, opacity: 1 }}
-      transition={{ duration: 1 }}
-      viewport={{ once: true }}
-      className="bg-black lg:min-h-screen pb-5 lg:pb-20 px-14 lg:px-20 w-full"
-    >
-      <BentoGrid className="max-w-4xl mx-auto lg:auto-rows-[20rem]">
-        {items.map((item, i) => (
-          <BentoGridItem
-            key={i}
-            title={item.title}
-            description={item.description}
-            className={item.className}
-            thumbnail={item.thumbnail}
-            titleClassName={item.titleClassName}
+    <section className="about wrap" id="about">
+      <Reveal className="split">
+        <p className="label">( 01 ) About</p>
+        <p className="statement">
+          I take technical ownership of frontend work, from code reviews and
+          performance optimization to full delivery: SIT and UAT through
+          production and post-release support.
+        </p>
+      </Reveal>
+      <div className="split">
+        <Reveal className="portrait">
+          <Image
+            src="/valerian-cutout.webp"
+            alt=""
+            width={1080}
+            height={1080}
+            sizes="(max-width: 820px) 100vw, 50vw"
           />
-        ))}
-      </BentoGrid>
-    </motion.div>
+        </Reveal>
+        <Reveal className="about__side">
+          <p className="label">What I own on a team</p>
+          <div className="stats">
+            {ownership.map((text, i) => (
+              <div className="stat" key={text}>
+                <span className="label">{String(i + 1).padStart(2, "0")}</span>
+                <em>{text}</em>
+              </div>
+            ))}
+          </div>
+        </Reveal>
+      </div>
+    </section>
   );
 };
 

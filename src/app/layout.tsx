@@ -1,18 +1,22 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter_Tight } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 
-const inter = Inter({ subsets: ["latin"] });
+const interTight = Inter_Tight({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-inter-tight",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.SITE_URL as string),
   authors: {
     name: "Valerian Dwi Purnomo",
   },
-  title: "Valerian Dwi Purnomo",
+  title: "Valerian Dwi Purnomo: Frontend Developer",
   description:
-    "I'm a Frontend Wizard 🚀. Constantly pushing the boundaries of what's possible, I love diving into the latest technologies like React ⚛️.",
+    "Valerian Dwi Purnomo, Frontend Developer in Jakarta building enterprise-scale React and Next.js applications.",
   keywords: [
     "frontend development",
     "React developer",
@@ -67,11 +71,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className=" !scrollbar-track-black scrollbar-thin scrollbar-thumb-teal-500 scrollbar-corner-teal-500"
-    >
-      <body className={inter.className}>
+    <html lang="en" className={interTight.variable}>
+      <body>
+        {/* sections start hidden and are revealed by script, so show them when script is off */}
+        <noscript>
+          <style>{`.reveal{opacity:1;transform:none}.card{--p:1}`}</style>
+        </noscript>
         <Analytics />
         {children}
       </body>

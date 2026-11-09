@@ -1,68 +1,62 @@
-"use client";
-import { PinContainer } from "@/components/ui/3d-pin";
 import Image from "next/image";
-import React from "react";
+import { StackList } from "@/components/ui/icons";
+import ScrollCard from "@/components/ui/scroll-card";
+import type { FeaturedWork } from "@/constants/contents";
 
-interface IListProjectProps {
-  pinTitle: string;
-  href?: string;
-  title: string;
-  description: string;
-  stacks: string[];
-  thumbnail: string;
-}
-
-const ListProject: React.FC<IListProjectProps> = ({
-  pinTitle,
-  href,
+const ListProject = ({
+  index,
+  tone,
+  company,
+  role,
+  period,
   title,
+  stack,
+  tags,
+  shot,
   description,
-  stacks,
-  thumbnail,
-}) => {
+  result,
+}: FeaturedWork & { index: number }) => {
   return (
-    <div className="min-h-[24rem] lg:min-h-[28rem] w-full flex items-center justify-center">
-      <PinContainer
-        title={pinTitle}
-        href={href || "#"}
-        cardClassName="bg-gray-900 pb-8"
-      >
-        <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
-          <Image
-            src={thumbnail}
-            height={"240"}
-            width={"360"}
-            alt="blog"
-            className="w-full h-full mb-4"
-          />
-          <p className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
-            {title}
-          </p>
-          <div className="text-base !m-0 !p-0 !mb-4 font-normal">
-            <span className="text-slate-400 ">{description}</span>
-          </div>
-          <div className="flex flex-row justify-between">
-            <div className="flex flex-row space-x-2 items-center">
-              {stacks?.map((stack, index) => (
-                <Image
-                  key={index}
-                  src={`./${stack}.svg`}
-                  alt={stack}
-                  height={"24"}
-                  width={"24"}
-                  className="w-[24px] h-[24px] bg-gray-900 !rounded-full p-1 border-[1px] border-teal-500 shadow-md shadow-teal-500"
-                />
-              ))}
-            </div>
-            {href && (
-              <p className="font-semibold text-neutral-600 text-sm mt-2 dark:text-neutral-400">
-                Project Info 🫵
-              </p>
-            )}
-          </div>
+    <article className="work">
+      <div className="work__meta">
+        <strong>{company}</strong>
+        <span className="label">{role}</span>
+        <span className="label">{period}</span>
+      </div>
+      <ScrollCard className={tone}>
+        <div className="grain" />
+        <div>
+          <h3>{title}</h3>
+          <StackList items={stack} />
+          <ul className="tags">
+            {tags.map((tag) => (
+              <li key={tag}>{tag}</li>
+            ))}
+          </ul>
         </div>
-      </PinContainer>
-    </div>
+        {shot && (
+          <figure className="card__shot">
+            <Image
+              src={shot.src}
+              alt={shot.alt}
+              width={shot.width}
+              height={shot.height}
+              sizes="(max-width: 820px) 100vw, 460px"
+            />
+          </figure>
+        )}
+        <span className="card__num" aria-hidden="true">
+          {String(index).padStart(2, "0")}
+        </span>
+        <div className="card__body">
+          <p>{description}</p>
+          <p className="card__result">
+            <span>Result</span>
+            {result}
+          </p>
+        </div>
+      </ScrollCard>
+    </article>
   );
 };
 
