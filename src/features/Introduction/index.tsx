@@ -19,6 +19,7 @@ const Introduction = () => {
         height={1080}
         sizes="(max-width: 820px) 100vw, 68vw"
         priority
+        quality={55}
       />
       <div className="grain" />
       <Nav />
